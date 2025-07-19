@@ -20,7 +20,7 @@ const Index = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-heo-blue-600 to-heo-blue-800 rounded-xl flex items-center justify-center">
               <span className="text-white font-bold text-xl font-montserrat">H</span>
             </div>
-            <span className="text-2xl font-bold font-montserrat text-heo-blue-900">HEOWAVE</span>
+            <span className="text-2xl font-bold font-montserrat text-heo-blue-900">HEOTEX</span>
           </div>
           
           <div className="flex items-center space-x-4">
@@ -35,7 +35,7 @@ const Index = () => {
                 <DialogHeader>
                   <DialogTitle className="font-montserrat">Добро пожаловать обратно</DialogTitle>
                   <DialogDescription className="font-open-sans">
-                    Войдите в свой аккаунт HeoWave
+                    Войдите в свой аккаунт HeoTex
                   </DialogDescription>
                 </DialogHeader>
                 <div className="space-y-4">
@@ -65,7 +65,7 @@ const Index = () => {
                 <DialogHeader>
                   <DialogTitle className="font-montserrat">Создать аккаунт</DialogTitle>
                   <DialogDescription className="font-open-sans">
-                    Присоединяйтесь к HeoWave уже сегодня
+                    Присоединяйтесь к HeoTex уже сегодня
                   </DialogDescription>
                 </DialogHeader>
                 <div className="space-y-4">
@@ -95,7 +95,7 @@ const Index = () => {
       <main className="container mx-auto px-6 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold font-montserrat bg-gradient-to-r from-heo-blue-600 to-heo-blue-800 bg-clip-text text-transparent mb-6">
-            HEOWAVE
+            HEOTEX
           </h1>
           <p className="text-xl md:text-2xl text-heo-blue-700 font-open-sans mb-8 max-w-2xl mx-auto">
             Современная платформа для инновационных решений
@@ -201,7 +201,7 @@ const Index = () => {
             Готовы начать?
           </h2>
           <p className="text-xl font-open-sans mb-8 opacity-90">
-            Присоединяйтесь к тысячам пользователей HeoWave
+            Присоединяйтесь к тысячам пользователей HeoTex
           </p>
           <Button 
             size="lg" 
@@ -221,10 +221,10 @@ const Index = () => {
             <div className="w-8 h-8 bg-gradient-to-r from-heo-blue-600 to-heo-blue-800 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm font-montserrat">H</span>
             </div>
-            <span className="text-lg font-bold font-montserrat text-heo-blue-900">HEOWAVE</span>
+            <span className="text-lg font-bold font-montserrat text-heo-blue-900">HEOTEX</span>
           </div>
           <p className="text-heo-blue-600 font-open-sans">
-            © 2024 HeoWave. Все права защищены.
+            © 2024 HeoTex. Все права защищены.
           </p>
         </div>
       </footer>
