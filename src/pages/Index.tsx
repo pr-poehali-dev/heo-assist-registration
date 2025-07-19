@@ -17,10 +17,10 @@ const Index = () => {
       <header className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-heo-blue-600 to-heo-blue-800 rounded-xl flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-r from-black to-heo-blue-900 rounded-xl flex items-center justify-center">
               <span className="text-white font-bold text-xl font-montserrat">H</span>
             </div>
-            <span className="text-2xl font-bold font-montserrat text-heo-blue-900">HEOTEX</span>
+            <span className="text-2xl font-bold font-montserrat bg-gradient-to-r from-black to-heo-blue-900 bg-clip-text text-transparent">HEOTEX</span>
           </div>
           
           <div className="flex items-center space-x-4">
@@ -218,10 +218,10 @@ const Index = () => {
       <footer className="container mx-auto px-6 py-8 border-t border-heo-blue-200">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <div className="w-8 h-8 bg-gradient-to-r from-heo-blue-600 to-heo-blue-800 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-black to-heo-blue-900 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm font-montserrat">H</span>
             </div>
-            <span className="text-lg font-bold font-montserrat text-heo-blue-900">HEOTEX</span>
+            <span className="text-lg font-bold font-montserrat bg-gradient-to-r from-black to-heo-blue-900 bg-clip-text text-transparent">HEOTEX</span>
           </div>
           <p className="text-heo-blue-600 font-open-sans">
             © 2024 HeoTex. Все права защищены.
