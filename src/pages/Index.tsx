@@ -252,50 +252,74 @@ const Index = () => {
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <Card className="bg-slate-800/50 border-blue-700 hover:bg-slate-800/70 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300">
+          <Card className="bg-slate-800/50 border-blue-700 hover:bg-slate-800/70 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 group">
             <CardHeader>
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center mb-4 shadow-lg">
-                <Icon name="User" size={24} className="text-white" />
+              <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Icon name="ShieldCheck" size={24} className="text-white" />
               </div>
-              <CardTitle className="font-montserrat text-blue-200">Регистрация пользователей</CardTitle>
+              <CardTitle className="font-montserrat text-blue-200">Кибербезопасность</CardTitle>
               <CardDescription className="font-open-sans text-blue-300">
-                Быстрая и безопасная регистрация новых пользователей
+                Комплексная защита от киберугроз и обеспечение безопасности данных
               </CardDescription>
             </CardHeader>
           </Card>
 
-          <Card className="bg-slate-800/50 border-blue-700 hover:bg-slate-800/70 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300">
+          <Card className="bg-slate-800/50 border-blue-700 hover:bg-slate-800/70 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 group">
             <CardHeader>
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center mb-4 shadow-lg">
-                <Icon name="Shield" size={24} className="text-white" />
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Icon name="Smartphone" size={24} className="text-white" />
               </div>
-              <CardTitle className="font-montserrat text-blue-200">Безопасный вход</CardTitle>
+              <CardTitle className="font-montserrat text-blue-200">Мобильные технологии</CardTitle>
               <CardDescription className="font-open-sans text-blue-300">
-                Защищенная авторизация для существующих пользователей
+                Разработка и оптимизация мобильных приложений нового поколения
               </CardDescription>
             </CardHeader>
           </Card>
 
-          <Card className="bg-slate-800/50 border-blue-700 hover:bg-slate-800/70 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300">
+          <Card className="bg-slate-800/50 border-blue-700 hover:bg-slate-800/70 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 group">
             <CardHeader>
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center mb-4 shadow-lg">
-                <Icon name="Settings" size={24} className="text-white" />
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Icon name="Globe" size={24} className="text-white" />
               </div>
-              <CardTitle className="font-montserrat text-blue-200">Личный кабинет</CardTitle>
+              <CardTitle className="font-montserrat text-blue-200">Веб-платформы</CardTitle>
               <CardDescription className="font-open-sans text-blue-300">
-                Управление профилем и настройками аккаунта
+                Создание современных веб-решений с передовыми технологиями
               </CardDescription>
             </CardHeader>
           </Card>
 
-          <Card className="bg-slate-800/50 border-blue-700 hover:bg-slate-800/70 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300">
+          <Card className="bg-slate-800/50 border-blue-700 hover:bg-slate-800/70 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 group">
             <CardHeader>
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center mb-4 shadow-lg">
-                <Icon name="Home" size={24} className="text-white" />
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Icon name="Brain" size={24} className="text-white" />
               </div>
-              <CardTitle className="font-montserrat text-blue-200">Главная страница</CardTitle>
+              <CardTitle className="font-montserrat text-blue-200">Искусственный интеллект</CardTitle>
               <CardDescription className="font-open-sans text-blue-300">
-                Центральная точка доступа ко всем функциям
+                ИИ-решения для автоматизации и оптимизации бизнес-процессов
+              </CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="bg-slate-800/50 border-blue-700 hover:bg-slate-800/70 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 group">
+            <CardHeader>
+              <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-amber-600 rounded-lg flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Icon name="Database" size={24} className="text-white" />
+              </div>
+              <CardTitle className="font-montserrat text-blue-200">Облачные решения</CardTitle>
+              <CardDescription className="font-open-sans text-blue-300">
+                Масштабируемая облачная инфраструктура и сервисы
+              </CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="bg-slate-800/50 border-blue-700 hover:bg-slate-800/70 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 group">
+            <CardHeader>
+              <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-600 rounded-lg flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Icon name="Cog" size={24} className="text-white" />
+              </div>
+              <CardTitle className="font-montserrat text-blue-200">Автоматизация</CardTitle>
+              <CardDescription className="font-open-sans text-blue-300">
+                Умные системы автоматизации для повышения эффективности
               </CardDescription>
             </CardHeader>
           </Card>
