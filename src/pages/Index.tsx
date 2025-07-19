@@ -16,11 +16,16 @@ const Index = () => {
       {/* Header */}
       <header className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-xl font-montserrat">H</span>
+          <div className="flex items-center space-x-3">
+            <div className="flex flex-col items-center space-y-1">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center shadow-xl rotate-12 hover:rotate-0 transition-transform duration-300">
+                  <Icon name="Zap" size={24} className="text-white drop-shadow-lg" />
+                </div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse"></div>
+              </div>
+              <span className="text-lg font-bold font-montserrat bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent tracking-wider">HEOTEX</span>
             </div>
-            <span className="text-2xl font-bold font-montserrat bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent">HEOTEX</span>
           </div>
           
           <div className="flex items-center space-x-4">
@@ -343,10 +348,15 @@ const Index = () => {
       <footer className="container mx-auto px-6 py-8 border-t border-blue-700/30">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-sm font-montserrat">H</span>
+            <div className="flex flex-col items-center space-y-1">
+              <div className="relative">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg rotate-6 hover:rotate-0 transition-transform duration-300">
+                  <Icon name="Zap" size={16} className="text-white drop-shadow-lg" />
+                </div>
+                <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse"></div>
+              </div>
+              <span className="text-sm font-bold font-montserrat bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent tracking-wider">HEOTEX</span>
             </div>
-            <span className="text-lg font-bold font-montserrat bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent">HEOTEX</span>
           </div>
           <p className="text-blue-300 font-open-sans">
             © 2024 HeoTex. Все права защищены.
