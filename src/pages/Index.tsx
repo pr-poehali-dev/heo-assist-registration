@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Icon from '@/components/ui/icon';
 
-const Index = () => {
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+interface IndexProps {
+  onShowLogin: () => void;
+  onShowRegister: () => void;
+}
+
+const Index = ({ onShowLogin, onShowRegister }: IndexProps) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
@@ -29,13 +28,14 @@ const Index = () => {
           </div>
           
           <div className="flex items-center space-x-4">
-            <Dialog open={isLoginOpen} onOpenChange={setIsLoginOpen}>
-              <DialogTrigger asChild>
-                <Button variant="outline" className="font-open-sans border-blue-400 text-blue-200 hover:bg-blue-800/20 hover:border-blue-300">
-                  <Icon name="LogIn" size={16} className="mr-2" />
-                  Войти
-                </Button>
-              </DialogTrigger>
+            <Button 
+              onClick={onShowLogin}
+              variant="outline" 
+              className="font-open-sans border-blue-400 text-blue-200 hover:bg-blue-800/20 hover:border-blue-300"
+            >
+              <Icon name="LogIn" size={16} className="mr-2" />
+              Войти
+            </Button>
               <DialogContent className="sm:max-w-lg bg-slate-800 border-blue-600 text-blue-100">
                 <DialogHeader>
                   <DialogTitle className="font-montserrat text-2xl text-center text-blue-200">Добро пожаловать обратно</DialogTitle>
