@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
@@ -9,8 +9,8 @@ interface IndexProps {
 }
 
 const VoiceAssistant = () => {
-  const [isListening, setIsListening] = React.useState(false);
-  const [transcript, setTranscript] = React.useState('');
+  const [isListening, setIsListening] = useState(false);
+  const [transcript, setTranscript] = useState('');
 
   const startListening = () => {
     setIsListening(true);
@@ -50,8 +50,8 @@ const VoiceAssistant = () => {
 };
 
 const VoiceAssistant = () => {
-  const [isListening, setIsListening] = React.useState(false);
-  const [transcript, setTranscript] = React.useState('');
+  const [isListening, setIsListening] = useState(false);
+  const [transcript, setTranscript] = useState('');
 
   const startListening = () => {
     setIsListening(true);
