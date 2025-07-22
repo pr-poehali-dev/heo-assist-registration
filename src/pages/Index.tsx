@@ -110,113 +110,15 @@ const Index = ({ onShowLogin, onShowRegister }: IndexProps) => {
                     </Button>
                   </div>
 
-                  <p className="text-center text-sm text-blue-300 font-open-sans">
-                    Нет аккаунта? 
-                    <button 
-                      onClick={() => { setIsLoginOpen(false); setIsRegisterOpen(true); }}
-                      className="text-blue-400 hover:text-blue-300 hover:underline ml-1"
-                    >
-                      Зарегистрироваться
-                    </button>
-                  </p>
-                </div>
-              </DialogContent>
-            </Dialog>
 
-            <Dialog open={isRegisterOpen} onOpenChange={setIsRegisterOpen}>
-              <DialogTrigger asChild>
-                <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 font-open-sans text-white">
-                  <Icon name="UserPlus" size={16} className="mr-2" />
-                  Регистрация
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-lg bg-slate-800 border-blue-600 text-blue-100">
-                <DialogHeader>
-                  <DialogTitle className="font-montserrat text-2xl text-center text-blue-200">Создать аккаунт</DialogTitle>
-                  <DialogDescription className="font-open-sans text-center text-blue-300">
-                    Присоединяйтесь к HeoTex уже сегодня
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="space-y-6">
-                  {/* Social Login Buttons */}
-                  <div className="space-y-3">
-                    <p className="text-sm text-blue-300 font-open-sans text-center">Быстрая регистрация через:</p>
-                    <div className="grid grid-cols-3 gap-3">
-                      <Button variant="outline" className="h-12 relative group hover:scale-105 transition-transform border-blue-500 text-blue-200 hover:bg-blue-700/30">
-                        <div className="flex items-center justify-center w-full">
-                          <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center mr-2">
-                            <span className="text-white text-xs font-bold">ВК</span>
-                          </div>
-                          <span className="text-sm font-open-sans">ВКонтакте</span>
-                        </div>
-                      </Button>
-                      <Button variant="outline" className="h-12 relative group hover:scale-105 transition-transform border-blue-500 text-blue-200 hover:bg-blue-700/30">
-                        <div className="flex items-center justify-center w-full">
-                          <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-2">
-                            <Icon name="Send" size={12} className="text-white" />
-                          </div>
-                          <span className="text-sm font-open-sans">Telegram</span>
-                        </div>
-                      </Button>
-                      <Button variant="outline" className="h-12 relative group hover:scale-105 transition-transform border-blue-500 text-blue-200 hover:bg-blue-700/30">
-                        <div className="flex items-center justify-center w-full">
-                          <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center mr-2">
-                            <span className="text-white text-xs font-bold">Я</span>
-                          </div>
-                          <span className="text-sm font-open-sans">Яндекс</span>
-                        </div>
-                      </Button>
-                    </div>
-                  </div>
+            <Button 
+              onClick={onShowRegister}
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 font-open-sans text-white"
+            >
+              <Icon name="UserPlus" size={16} className="mr-2" />
+              Регистрация
+            </Button>
 
-                  {/* Divider */}
-                  <div className="relative">
-                    <div className="absolute inset-0 flex items-center">
-                      <span className="w-full border-t border-blue-600" />
-                    </div>
-                    <div className="relative flex justify-center text-xs uppercase">
-                      <span className="bg-slate-800 px-2 text-blue-400 font-open-sans">или</span>
-                    </div>
-                  </div>
-
-                  {/* Regular Form */}
-                  <div className="space-y-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="reg-name" className="font-open-sans text-blue-200">Имя</Label>
-                      <Input id="reg-name" placeholder="Ваше полное имя" className="h-12 bg-slate-700 border-blue-600 text-blue-100 placeholder:text-blue-400" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="reg-email" className="font-open-sans text-blue-200">Email</Label>
-                      <Input id="reg-email" type="email" placeholder="your@email.com" className="h-12 bg-slate-700 border-blue-600 text-blue-100 placeholder:text-blue-400" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="reg-password" className="font-open-sans text-blue-200">Пароль</Label>
-                      <Input id="reg-password" type="password" placeholder="Минимум 8 символов" className="h-12 bg-slate-700 border-blue-600 text-blue-100 placeholder:text-blue-400" />
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <input type="checkbox" id="terms" className="rounded bg-slate-700 border-blue-600" />
-                      <Label htmlFor="terms" className="text-sm font-open-sans text-blue-200">
-                        Я согласен с <span className="text-blue-400 hover:text-blue-300 hover:underline cursor-pointer">условиями использования</span>
-                      </Label>
-                    </div>
-                    <Button className="w-full h-12 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 font-open-sans text-lg text-white">
-                      <Icon name="UserPlus" size={20} className="mr-2" />
-                      Создать аккаунт
-                    </Button>
-                  </div>
-
-                  <p className="text-center text-sm text-blue-300 font-open-sans">
-                    Уже есть аккаунт? 
-                    <button 
-                      onClick={() => { setIsRegisterOpen(false); setIsLoginOpen(true); }}
-                      className="text-blue-400 hover:text-blue-300 hover:underline ml-1"
-                    >
-                      Войти
-                    </button>
-                  </p>
-                </div>
-              </DialogContent>
-            </Dialog>
           </div>
         </nav>
       </header>
@@ -234,7 +136,7 @@ const Index = ({ onShowLogin, onShowRegister }: IndexProps) => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 font-open-sans text-lg px-8 text-white"
-              onClick={() => setIsRegisterOpen(true)}
+              onClick={onShowRegister}
             >
               Начать работу
               <Icon name="ArrowRight" size={20} className="ml-2" />
@@ -360,7 +262,7 @@ const Index = ({ onShowLogin, onShowRegister }: IndexProps) => {
           <Button 
             size="lg" 
             className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 font-open-sans text-lg px-8 text-white shadow-lg"
-            onClick={() => setIsRegisterOpen(true)}
+            onClick={onShowRegister}
           >
             Зарегистрироваться сейчас
             <Icon name="Zap" size={20} className="ml-2" />
