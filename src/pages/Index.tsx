@@ -16,6 +16,47 @@ const VoiceAssistant = () => {
     setIsListening(true);
     // Имитация голосового ввода
     setTimeout(() => {
+      setTranscript('Привет, HeoTex! Создай для меня лендинг страницу.');
+      setIsListening(false);
+    }, 2000);
+  };
+
+  return (
+    <div className="fixed bottom-6 right-6 z-50">
+      <div className="flex flex-col items-end gap-3">
+        {transcript && (
+          <div className="bg-slate-800/95 border border-blue-500 rounded-lg p-3 max-w-xs backdrop-blur-sm">
+            <p className="text-blue-200 text-sm font-open-sans">{transcript}</p>
+          </div>
+        )}
+        <Button
+          onClick={startListening}
+          disabled={isListening}
+          className={`w-14 h-14 rounded-full ${
+            isListening 
+              ? 'bg-red-500 hover:bg-red-600 animate-pulse' 
+              : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700'
+          } shadow-lg`}
+        >
+          <Icon 
+            name={isListening ? 'MicOff' : 'Mic'} 
+            size={24} 
+            className="text-white" 
+          />
+        </Button>
+      </div>
+    </div>
+  );
+};
+
+const VoiceAssistant = () => {
+  const [isListening, setIsListening] = React.useState(false);
+  const [transcript, setTranscript] = React.useState('');
+
+  const startListening = () => {
+    setIsListening(true);
+    // Имитация голосового ввода
+    setTimeout(() => {
       setTranscript('Привет, HelTex! Создай для меня лендинг страницу.');
       setIsListening(false);
     }, 2000);
@@ -184,6 +225,14 @@ const Index = ({ onShowLogin, onShowRegister }: IndexProps) => {
             </Button>
             <Button 
               size="lg" 
+              className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 font-open-sans text-lg px-8 text-white"
+              onClick={() => window.open('https://t.me/heotex_bot', '_blank')}
+            >
+              <Icon name="Send" size={20} className="mr-2" />
+              Открыть в Telegram
+            </Button>
+            <Button 
+              size="lg" 
               variant="outline" 
               className="border-blue-400 text-blue-200 hover:bg-blue-800/30 hover:border-blue-300 font-open-sans text-lg px-8"
             >
@@ -330,6 +379,9 @@ const Index = ({ onShowLogin, onShowRegister }: IndexProps) => {
           </p>
         </div>
       </footer>
+
+      {/* Голосовой помощник */}
+      <VoiceAssistant />
     </div>
   );
 };
